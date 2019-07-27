@@ -1,9 +1,10 @@
 const { resolve } = require('path')
 
 module.exports = {
+    mode: 'development',
     context: resolve(__dirname, 'src'),
     entry: [
-        './index.js'
+        './src/index.js'
     ],
     output: {
         filename: 'bundle.js',
@@ -14,8 +15,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
-                use: ['babel-loader',],
+                test: /\.js?$/,
+                use: [
+                    {
+                        loader: 'babel-loader',
+                        options: {
+                            presets: ['react']
+                        }
+                    }
+                ],
                 exclude: /node_modules/
             },
         ],
