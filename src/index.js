@@ -1,12 +1,11 @@
-import React from 'react'
+import React, { Component }  from 'react'
 import App from './App'
+import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-class Main extends React.Component {
-	render() {
-		return (
-			<App></App>
-		)
-	}
-}
-
-export default Main
+ReactDOM.render(
+  <Router>
+    <App></App>
+  </Router>
+  , document.getElementById('root')
+)
