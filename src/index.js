@@ -5,7 +5,6 @@ import App from './App';
 import Hello from './Hello';
 import * as serviceWorker from './serviceWorker';
 import { Route, Link, BrowserRouter as Router, Switch } from 'react-router-dom';
-import CreateElementSample from './CreateElementSample';
 
 const border = {
   'borderBottom': 'solid black 1px'
@@ -18,7 +17,6 @@ const routing = (
         <Switch>
           <Route exact path="/" component={App} />
           <Route path="/hello" component={Hello} />
-          <Route path="/createElementSample" component={CreateElementSample} />
         </Switch>
       </div>
 
@@ -28,10 +26,6 @@ const routing = (
 
       <p>
         <Link to="/hello">Hello</Link>
-      </p>
-
-      <p>
-        <Link to="/createElementSample">createElement sample</Link>
       </p>
     </div>
   </Router>
